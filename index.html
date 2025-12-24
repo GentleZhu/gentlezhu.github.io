@@ -230,7 +230,7 @@
 </td>
 <td valign="top">
 <b>Applied Scientist</b><br>
-Think Forward Lab<br>
+Bedrock Core Science<br>
 AWS AI/ML Services & Infrastructure<br>
 <!-- <a href="https://zju">Computer Science Department</a><br> -->
 <!-- Office: CODA E1358B<br>  -->
@@ -239,6 +239,11 @@ Email: <a href="mailto:qi.zhu.ckc@gmail.com">qi.zhu.ckc@gmail.com</a><br>
 <br>
 
 <b>Bio</b><br>
+<p>
+  Currently, I am an <a href="https://www.linkedin.com/in/qi-zhu-22633598/">Applied Scientist</a> at AWS Bedrock, working on data-driven optimization of large language models (LLMs).
+  Over the last two years, I contributed to pioneering AI systems for structured data (<a href="https://dl.acm.org/doi/pdf/10.1145/3637528.3671603">GraphStorm</a>, <a href="https://aws.amazon.com/blogs/machine-learning/build-graphrag-applications-using-amazon-bedrock-knowledge-bases/">GraphRAG</a>) utilizing structured knowledge for applications in retrieval-augmented generation (RAG), graph machine learning, and beyond. 
+  
+</p>
 I obtained my Ph.D. in Computer Science from University of Illinois at Urbana-Champaign advised by 
 <a href="https://hanj.cs.illinois.edu/">Prof. Jiawei Han</a>, where I was a member of <a href="https://hanj.cs.illinois.edu/">
   Data and Information Systems Laboratory (DAIS)
@@ -247,7 +252,7 @@ I obtained my Ph.D. in Computer Science from University of Illinois at Urbana-Ch
  <a href="http://dm1.cs.uiuc.edu/">
   Data Mining Group. 
  </a>
-Here is my <a href="./files/resume.pdf">CV (slightly outdated)</a>.
+Here is my <a href="./files/resume.pdf">CV (outdated)</a>.
 </td>
 </tr>
 </tbody>
@@ -256,17 +261,14 @@ Here is my <a href="./files/resume.pdf">CV (slightly outdated)</a>.
 <div id="outline-container-orgbfaee0b" class="outline-2">
 <h2 id="orgbfaee0b">Research</h2>
 <div class="outline-text-2" id="text-orgbfaee0b">
-<p>
-  At AWS, I design AI systems (<a href="https://dl.acm.org/doi/pdf/10.1145/3637528.3671603">GraphStorm</a>) utilizing structured knowledge for applications in retrieval-augmented generation (RAG), graph machine learning, and beyond. 
-  As a founding member of the GraphRAG Team, I help drive the launch of structure-aware features across various RAG services.
-</p>
 
 <p>
   My current and past work focuses on the following themes:
 </p>
 
 <ol class="org-ol">
-<li><b>LLMs with Structured Knowledge</b> &#x2013; Harnessing explicit and implicit data structures to enhance the <i>long-context performance</i> and <i>parameter efficiency</i> of large language models.</li>
+<li><b> Data-Driven LLM Optimization</b> &#x2013; Mining massive LLM invocations to guide strategic decisions in LLM deployment—determining when to leverage multimodal representations for long-context processing, and how to efficiently select training data based on real-world usage patterns, etc.</li>
+<li><b>LLMs with Structured Knowledge</b> &#x2013; Harnessing explicit and implicit data structures to to enhance LLM <i>reasoning capabilities</i> and mitigate hallucinations</li>
 
 <!--  <li><b>Generalization of Graph Neural Networks</b> &#x2013; Making graph neural networks more robust to low-quality annotations and generalizable across different datasets.</li>  -->
 
@@ -282,13 +284,13 @@ Here is my <a href="./files/resume.pdf">CV (slightly outdated)</a>.
 <p>
   We aim to make LLMs more efficient and resilient against hallucinations by harnessing structured knowledge. A key challenge lies in making the language model structure-aware while mitigating performance bottlenecks, 
   such as the <i>lost-in-the-middle</i> phenomenon, 
-  To address this, we explore post-training, fine-tuning, and pre-training techniques on graph structured data.
+  To address this, we explore post-training, fine-tuning, and pre-training techniques on graph structured data. <a href="https://sknowllm.github.io/">[Structured Knowledge for LLMs, KDD Workshop]</a>
 </p>
 
 <ul class="org-ul">
-  <li><b>Graph Retrieval Augmented Generation</b>: We develop structure-aware algorithms for pre-retrieval, retrieval, and inference stages of RAG.
+  <li><b>Graph Retrieval Augmented Generation</b>: We propose HYBGRAG, an agentic system for hybrid question answering over semi-structured knowledge bases. Unlike prior RAG systems that handle only textual or relational information, HYBGRAG synergizes both through a retriever bank with adaptive module selection and a critic module that provides corrective feedback for iterative refinement. This structure-aware approach addresses the lost-in-the-middle phenomenon by precisely routing questions to appropriate retrieval modules and self-correcting extraction errors.
   <ul class="org-ul">
-  <li>AGENT-G: An Agentic Framework for Graph Retrieval Augmented Generation, Under Review</li>
+  <li><a href="https://aclanthology.org/2025.acl-long.43.pdf">Hybgrag: Hybrid retrieval-augmented generation on textual and relational knowledge bases </a>, ACL 25</li>
   </ul></li>
   </ul>
 
