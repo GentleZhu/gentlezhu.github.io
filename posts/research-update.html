@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>On grounding LLMs with structured knowledge - Qi Zhu</title>
+<link rel="stylesheet" type="text/css" href="../main.css" />
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">On grounding LLMs with structured knowledge</h1>
+
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="../index.html">Home</a></li>
+<li><a href="../blog.html">Blog</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-post" class="outline-2">
+<div class="outline-text-2" id="text-post">
+<p class="post-meta">
+<time datetime="2026-05-20">2026-05-20</time>
+</p>
+
+<p>
+This is a placeholder post. Replace it with your actual reflection — what follows is a sketch.
+</p>
+
+<h3>The gap between benchmark and deployment</h3>
+<p>
+Retrieval-augmented generation benchmarks reward recall over structure: a
+larger context, more passages, more tokens. In deployment, the picture
+flips — long contexts surface the <i>lost-in-the-middle</i> problem, and
+precision starts to matter more than recall.
+</p>
+
+<h3>Why structure-aware retrievers help</h3>
+<p>
+A retriever that knows the shape of the underlying knowledge — relational,
+hierarchical, typed — can route a query to the right slice of evidence
+instead of dumping the top-k passages into the prompt. That's the
+premise behind HYBGRAG and the broader line of work on
+<a href="https://sknowllm.github.io/">structured knowledge for LLMs</a>.
+</p>
+
+<p><a href="../blog.html">&larr; Back to blog</a></p>
+</div>
+</div>
+
+</div>
+</body>
+</html>
