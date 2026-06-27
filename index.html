@@ -203,8 +203,9 @@
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
 <li><a href="#orgbfaee0b">Research</a></li>
-<li><a href="#orge2b9ad1">I. LLMs with Structured Knowledge</a></li>
-<li><a href="#org9b0ed89">II. Graph Representation Learning</a></li>
+<li><a href="#orgf0b4e5a">I. Faithful Multi-Modal Optimization for small LLMs</a></li>
+<li><a href="#orge2b9ad1">II. LLMs with Structured Knowledge</a></li>
+<li><a href="#org9b0ed89">III. Graph Representation Learning</a></li>
 <li><a href="#orgf8bf28a">Awards</a></li>
 </ul>
 </div>
@@ -268,7 +269,7 @@ Here is my <a href="./files/resume.pdf">CV (outdated)</a>.
 </p>
 
 <ol class="org-ol">
-<li><b> Data-Driven LLM Optimization</b> &#x2013; Mining massive LLM invocations to guide strategic decisions in LLM deployment—determining when to leverage multimodal representations for long-context processing, and how to efficiently select training data based on real-world usage patterns, etc.</li>
+<li><b>Faithful Multi-Modal Optimization for small LLMs</b> &#x2013; Addressing the reasoning gap and hallucination bottlenecks in small LLMs. We investigate how to leverage real-world usage patterns and data-driven optimization to build highly calibrated, faithful, and reliable multi-modal models without relying on massive compute.</li>
 <li><b>LLMs with Structured Knowledge</b> &#x2013; Harnessing explicit and implicit data structures to to enhance LLM <i>reasoning capabilities</i> and mitigate hallucinations</li>
 
 <!--  <li><b>Generalization of Graph Neural Networks</b> &#x2013; Making graph neural networks more robust to low-quality annotations and generalizable across different datasets.</li>  -->
@@ -279,13 +280,38 @@ Here is my <a href="./files/resume.pdf">CV (outdated)</a>.
 </div>
 </div>
 
+<div id="outline-container-orgf0b4e5a" class="outline-2">
+<h2 id="orgf0b4e5a">I. Faithful Multi-Modal Optimization for small LLMs</h2>
+<div class="outline-text-2" id="text-orgf0b4e5a">
+  <p>
+    Depite being edge computable, small language models (SLMs) often suffer from reasoning gaps and hallucinations, which can significantly impact their performance and reliability in real-world applications. 
+    We applied various methods to improve the grounding, faithfulness and reliability of these models including test-time scaling, post-training etc.
+  </p>
+<img src="img/dre.png" class="wrap" width="300px"  />
+  <ul class="org-ul">
+  <li><b>Tabular Referencing Error</b>: Addressing the pervasive "data referencing errors" (DREs) where compact models miscite, confuse, or omit table values despite parsing the structure correctly. Supported by our recent ACL work, we introduce specialized critic modules optimized via Reinforcement Learning with Verified Reward (RLVR) to significantly enhance the test-time scaling and faithfulness of 7B to 20B parameter models on data-intensive tasks.
+  <ul class="org-ul">
+  <li>When LLMs Read Tables Carelessly: Measuring and Reducing Data Referencing Errors, ACL 26 (Oral)</li>
+  </ul></li>
+  </ul>
+<img src="img/vera.png" class="wrap" width="300px"  />
+  <ul class="org-ul">
+  <li><b>Mechanistic Interpretability and Retrieval Dynamics in Long-Context VLMs</b>: Investigating the internal processing bottlenecks of Vision-Language Models handling dense, text-rich image documents. Supported by our recent work introducing VERA, we discover Visual Evidence Retrieval (VER) heads—a sparse, dynamic set of attention heads critical for locating visual cues during high-uncertainty reasoning steps. We leverage these mechanistic insights to design training-free, inference-time interventions that mitigate the visual-textual attention imbalance and significantly boost long-document comprehension.</li>
+    <ul class="org-ul">
+  <li><a href="https://arxiv.org/pdf/2602.10146">VERA: Identifying and Leveraging Visual Evidence Retrieval Heads in Long-Context Understanding </a>, IJCAI 26</li>
+  </ul></li>
+  </ul>
+
+</div> 
+</div>
+
 <div id="outline-container-orge2b9ad1" class="outline-2">
-<h2 id="orge2b9ad1">I. LLMs with Structured Knowledge</h2>
+<h2 id="orge2b9ad1">II. LLMs with Structured Knowledge</h2>
 <div class="outline-text-2" id="text-orge2b9ad1">
 <p>
   We aim to make LLMs more efficient and resilient against hallucinations by harnessing structured knowledge. A key challenge lies in making the language model structure-aware while mitigating performance bottlenecks, 
   such as the <i>lost-in-the-middle</i> phenomenon, 
-  To address this, we explore post-training, fine-tuning, and pre-training techniques on graph structured data. <a href="https://sknowllm.github.io/">[Structured Knowledge for LLMs, KDD Workshop]</a>
+  To address this, we explore fine-tuning, and pre-training techniques on graph structured data. <a href="https://surgellm.github.io/acl2026/">[SURGeLLM, ACL 2026]</a> <a href="https://sknowllm.github.io/">[Structured Knowledge for LLMs, KDD 2025]</a>
 </p>
 
 <ul class="org-ul">
@@ -326,7 +352,7 @@ Here is my <a href="./files/resume.pdf">CV (outdated)</a>.
 
 
 <div id="outline-container-org9b0ed89" class="outline-2">
-<h2 id="org9b0ed89">II. Graph Representation Learning</h2>
+<h2 id="org9b0ed89">III. Graph Representation Learning</h2>
 <div class="outline-text-2" id="text-org9b0ed89">
 
 <p>
