@@ -15,12 +15,15 @@
     /* font-family: -apple-system, BlinkMacSystemFont, 'Montserrat', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
 
     body {
-        font-size: 13pt;
+        font-size: clamp(11pt, 0.55vw + 9.5pt, 13pt);
         color: #444;
         margin-top: 0;
         /* line-height: 18pt; */
         line-height: 1.5;
         /* font-weight: 350; */
+        -webkit-text-size-adjust: 100%;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
     }
 
     body #content {
@@ -159,6 +162,51 @@ content: "*** "
     img.wrap {
         float: right;
         margin: 0 0 0 0;
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Blog post list */
+    .post-list {
+        list-style: none;
+        padding-left: 0;
+    }
+    .post-list > li {
+        margin: 1.5em 0;
+        padding-bottom: 1.2em;
+        border-bottom: 1px solid #eee;
+        line-height: 1.4;
+    }
+    .post-list > li:last-child {
+        border-bottom: none;
+    }
+    .post-title {
+        font-weight: 600;
+        font-size: 1.1em;
+    }
+    .post-date {
+        color: #999;
+        font-size: 0.85em;
+        font-family: monospace;
+        margin-left: 0.5em;
+        white-space: nowrap;
+    }
+    .post-excerpt {
+        margin: 0.4em 0 0;
+        color: #666;
+        font-size: 0.95em;
+    }
+    .post-meta {
+        color: #999;
+        font-size: 0.9em;
+        font-family: monospace;
+        margin-top: -0.5em;
+        margin-bottom: 1.5em;
+    }
+    .page-subtitle {
+        color: #888;
+        font-weight: normal;
+        font-size: 0.55em;
     }
 
     .outline-text-4 {
@@ -211,6 +259,15 @@ content: "*** "
 
     img {
         border: none;
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Keep the bio selfie at its original size on desktop; the global
+       img rule above otherwise shrinks it via a circular td/img layout. */
+    #content table td img {
+        width: 220px;
+        max-width: 220px;
     }
 
     .share img {
@@ -969,6 +1026,14 @@ content: "*** "
 
 } /* END OF @media all */
 
+@media screen and (max-width: 900px)
+{
+    body #content {
+        padding-left: 240px;
+        padding-right: 10px;
+    }
+}
+
 @media screen and (max-width: 750px)
 {
     #table-of-contents {
@@ -977,9 +1042,63 @@ content: "*** "
 
     body #content {
         padding-top: 0px;
-        padding-left: 0px;
-        max-width: 800pt;
+        padding-left: 16px;
+        padding-right: 16px;
+        max-width: 100%;
         background-color: white;
     }
 
+    /* Shrink the selfie in the bio table on small screens */
+    body #content table td img {
+        width: 130px;
+        max-width: 40vw;
+    }
+
+    body .title {
+        font-size: 20pt;
+    }
+
+    /* Avoid horizontal scroll from wide research figures */
+    img.wrap {
+        float: none;
+        display: block;
+        margin: 1em auto;
+        max-width: 90%;
+    }
+
+    pre {
+        font-size: 80%;
+    }
+
 } /* END OF @media screen */
+
+@media screen and (max-width: 480px)
+{
+    body #content {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    body .title {
+        font-size: 18pt;
+    }
+
+    .post-list > li {
+        margin: 1.2em 0;
+    }
+
+    /* Stack the bio: image on top, text below */
+    body #content table,
+    body #content table tbody,
+    body #content table tr,
+    body #content table td {
+        display: block;
+        width: 100% !important;
+    }
+    body #content table td img {
+        width: 120px;
+        max-width: 50vw;
+        margin-bottom: 0.8em;
+    }
+
+} /* END OF @media screen and (max-width: 480px) */
