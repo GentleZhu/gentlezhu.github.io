@@ -1,5 +1,3 @@
-# Building the AI-Native Lab (1): Architecting the Information Ingress
-
 Earlier this year, the rapid evolution of coding agents like Claude Code signaled a profound shift in research paradigms. Much of a researcher’s daily routine can now be seamlessly delegated to an AI companion. As this shift accelerates, a shared realization is emerging across the community: Infrastructure is the cornerstone of AI-native organizations.
 
 The real "aha!" moment for me came when I watched Claude Code autonomously execute long-horizon tasks—running experiments and monitoring their progress end-to-end. It immediately brought back memories of endless days and nights spent formatting datasets, tracking loss curves, and babysitting model training. Today, that familiar late-night anxiety has been largely alleviated by automation.
