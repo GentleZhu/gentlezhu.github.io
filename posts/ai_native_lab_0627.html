@@ -5,6 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>On grounding LLMs with structured knowledge - Qi Zhu</title>
 <link rel="stylesheet" type="text/css" href="../main.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" />
+<script defer src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script defer src="../post-loader.js"></script>
 </head>
 <body>
 <div id="content" class="content">
@@ -26,26 +31,10 @@
 <time datetime="2026-05-20">2026-05-20</time>
 </p>
 
-<p>
-This is a placeholder post. Replace it with your actual reflection — what follows is a sketch.
-</p>
-
-<h3>The gap between benchmark and deployment</h3>
-<p>
-Retrieval-augmented generation benchmarks reward recall over structure: a
-larger context, more passages, more tokens. In deployment, the picture
-flips — long contexts surface the <i>lost-in-the-middle</i> problem, and
-precision starts to matter more than recall.
-</p>
-
-<h3>Why structure-aware retrievers help</h3>
-<p>
-A retriever that knows the shape of the underlying knowledge — relational,
-hierarchical, typed — can route a query to the right slice of evidence
-instead of dumping the top-k passages into the prompt. That's the
-premise behind HYBGRAG and the broader line of work on
-<a href="https://sknowllm.github.io/">structured knowledge for LLMs</a>.
-</p>
+<article id="post-body" data-md="ai_native_lab_0627.md">
+<p><em>Loading…</em></p>
+<noscript>Enable JavaScript to view this post.</noscript>
+</article>
 
 <p><a href="../blog.html">&larr; Back to blog</a></p>
 </div>
